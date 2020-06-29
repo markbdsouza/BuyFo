@@ -14,6 +14,60 @@ $beakpoint choices
 
 ORDER of changin: base + Typography -> general layout + grid -> page laoyout -> component
 */
+.carousel {
+  height: 80vh; }
+  .carousel__item {
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+    border: 1px solid red; }
+    .carousel__item--2 {
+      background-image: linear-gradient(to right, rgba(94, 33, 33, 0.7), rgba(94, 33, 33, 0.6)), url("../../img/Carousel/product.jpg");
+      background-position: bottom;
+      background-repeat: none;
+      background-size: cover; }
+  .carousel__text--2 {
+    font-size: 5rem;
+    padding: 10rem;
+    font-weight: 400;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: #eacd65; }
+  .carousel__text--3 {
+    padding-left: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; }
+  .carousel__figure--1 {
+    width: 30vw;
+    height: auto;
+    position: relative; }
+  .carousel__figure--3 {
+    width: 60%; }
+  .carousel img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.btn {
+  padding: 1.5rem 4rem; }
+  .btn, .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s ease-out;
+    position: relative;
+    border: none;
+    cursor: pointer; }
+
 *,
 *::after,
 *::before {
@@ -83,16 +137,16 @@ body {
   line-height: 1.7; }
 
 .heading-primary {
-  color: #fff;
+  color: #5e2121;
   text-transform: uppercase;
   align-items: center;
   backface-visibility: hidden;
   margin-bottom: 3rem; }
   .heading-primary--main {
     display: block;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 500;
-    letter-spacing: 2rem;
+    letter-spacing: 1rem;
     animation: moveInLeft 1s;
     animation-timing-function: ease-out; }
     @media only screen and (max-width: 37.5em) {
@@ -103,7 +157,6 @@ body {
     display: block;
     font-size: 3rem;
     font-weight: 300;
-    letter-spacing: 1rem;
     animation: moveInRight 1s;
     animation-timing-function: ease-out; }
     @media only screen and (max-width: 37.5em) {
@@ -238,7 +291,7 @@ body {
 .header {
   background-color: #8d3434;
   width: 100%;
-  height: 50vh;
+  height: 10vw;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -251,7 +304,8 @@ body {
   list-style: none;
   display: flex;
   flex-direction: row;
-  font-size: 2rem; }
+  font-size: 2rem;
+  color: #eacd65; }
 
 .navigation__item {
   display: block;
