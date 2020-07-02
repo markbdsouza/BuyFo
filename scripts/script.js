@@ -69,8 +69,10 @@ const PRODUCT_CATEGORY_LIST_HTML = {
 };
 
 function updateProductGrid(e) {
-  console.log('CLICKED');
-  console.log(e.currentTarget.dataset.category);
+  productCategories.forEach((category) => {
+    category.classList.remove('product__category--active');
+  });
+  e.currentTarget.classList.add('product__category--active');
   productGallery.innerHTML =
     PRODUCT_CATEGORY_LIST_HTML[e.currentTarget.dataset.category];
 }
