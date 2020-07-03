@@ -3,12 +3,17 @@
   position: relative;
   margin-left: -49.5vw;
   left: 50%;
-
-  margin-top: 100px;
+  padding-top: 10rem;
   left: 50%;
-  background-color: $color-primary;
+  background-image: linear-gradient(
+    to top right,
+    $color-primary-dark,
+    $color-primary-dark
+  );
+
   box-sizing: inherit;
   overflow: hidden;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 5%, 2% 10%);
 }
 .arrivals {
   &__heading {
@@ -31,6 +36,7 @@
       margin: 0 10rem;
       z-index: 0;
     }
+
     z-index: 0;
   }
 
@@ -49,7 +55,7 @@
     background-size: initial;
     object-fit: cover;
     border-radius: 0.5rem;
-    border: 3px solid $color-primary-dark;
+    border: 5px solid $color-primary;
     margin-bottom: 1rem;
   }
 
@@ -60,18 +66,20 @@
     z-index: 10;
     background-color: $color-secondary-light;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 2.5rem;
     border-radius: 50%;
     height: 9rem;
     width: 9rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid $color-primary-dark;
+    border: 3px solid $color-primary;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
   }
 
   &__name {
     font-size: 3rem;
     color: $color-secondary-light;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
   }
 }

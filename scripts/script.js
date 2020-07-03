@@ -95,3 +95,17 @@ $(document).ready(function () {
     adaptiveHeight: false,
   });
 });
+
+$(document).ready(function () {
+  $('.arrivals__container').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true,
+
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
+});
