@@ -194,7 +194,7 @@ ORDER of changin: base + Typography -> general layout + grid -> page laoyout -> 
   left: 50%;
   padding-top: 10rem;
   left: 50%;
-  background-image: linear-gradient(to top right, #5e2121, #5e2121);
+  background-image: linear-gradient(to bottom right, #5e2121, #8d3434);
   box-sizing: inherit;
   overflow: hidden;
   clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 5%, 2% 10%); }
@@ -232,7 +232,7 @@ ORDER of changin: base + Typography -> general layout + grid -> page laoyout -> 
   background-size: initial;
   object-fit: cover;
   border-radius: 0.5rem;
-  border: 5px solid #8d3434;
+  border: 5px solid rgba(225, 66, 66, 0.5);
   margin-bottom: 1rem; }
 
 .arrivals__price {
@@ -532,3 +532,18 @@ body {
 .navigation__link:hover::after, .navigation__link:active::after {
   height: 0.5rem;
   width: 100%; }
+
+.footer {
+  padding: 3rem 10rem 3rem; }
+  .footer__details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    text-align: center;
+    margin-top: 3rem; }
+  .footer__logo {
+    height: 7rem; }
+
+.copyright {
+  font-size: 1.5rem;
+  text-align: center; }

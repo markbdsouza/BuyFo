@@ -6,9 +6,9 @@
   padding-top: 10rem;
   left: 50%;
   background-image: linear-gradient(
-    to top right,
+    to bottom right,
     $color-primary-dark,
-    $color-primary-dark
+    $color-primary
   );
 
   box-sizing: inherit;
@@ -55,7 +55,7 @@
     background-size: initial;
     object-fit: cover;
     border-radius: 0.5rem;
-    border: 5px solid $color-primary;
+    border: 5px solid rgba($color-primary-light, 0.5);
     margin-bottom: 1rem;
   }
 
