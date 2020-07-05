@@ -282,6 +282,17 @@ ORDER of changin: base + Typography -> general layout + grid -> page laoyout -> 
   align-items: center;
   border: 3px solid #8d3434;
   font-family: 'Yanone Kaffeesatz', sans-serif; }
+  @media only screen and (max-width: 75em) {
+    .arrivals__price {
+      bottom: 20%;
+      left: 0%; } }
+  @media only screen and (max-width: 56.25em) {
+    .arrivals__price {
+      height: 7rem;
+      width: 7rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .arrivals__price {
+      left: 10%; } }
 
 .arrivals__name {
   font-size: 3rem;
@@ -512,14 +523,20 @@ body {
 .header {
   background-image: linear-gradient(to left, #8d3434, #5e2121);
   width: 100%;
-  height: 10vw;
-  overflow: hidden;
+  height: minmax(10vw, auto);
+  min-height: 10rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0rem 4rem; }
   .header__logo {
     height: 15rem; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      padding: 1rem 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      flex-direction: column; } }
 
 .navigation__list {
   list-style: none;
@@ -531,6 +548,9 @@ body {
 .navigation__item {
   display: block;
   padding: 0 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .navigation__item {
+      padding: 0 1.5rem; } }
   .navigation__item--active .navigation__link::after {
     content: '';
     margin-top: 1rem;
@@ -568,7 +588,7 @@ body {
   padding: 3rem 10rem 3rem; }
   .footer__details {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     grid-gap: 2rem;
     text-align: center;
     margin-top: 3rem; }

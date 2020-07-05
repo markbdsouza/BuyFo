@@ -86,7 +86,7 @@ $(document).ready(function () {
   $('.carousel').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
 
@@ -105,7 +105,23 @@ $(document).ready(function () {
     centerMode: true,
     focusOnSelect: true,
 
-    autoplay: true,
-    autoplaySpeed: 2000,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          // asNavFor: '.slider-for',
+          dots: true,
+          centerMode: true,
+          focusOnSelect: true,
+
+          // autoplay: true,
+          // autoplaySpeed: 1000,
+        },
+      },
+    ],
   });
 });

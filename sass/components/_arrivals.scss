@@ -75,6 +75,18 @@
     align-items: center;
     border: 3px solid $color-primary;
     font-family: 'Yanone Kaffeesatz', sans-serif;
+
+    @include respond(tab-land) {
+      bottom: 20%;
+      left: 0%;
+    }
+    @include respond(tab-port) {
+      height: 7rem;
+      width: 7rem;
+    }
+    @include respond(phone) {
+      left: 10%;
+    }
   }
 
   &__name {
