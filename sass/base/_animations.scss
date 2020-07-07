@@ -3,11 +3,23 @@
     opacity: 0;
     transform: translateX(-10rem);
   }
-
   50% {
     transform: translateX(3rem);
   }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
+@keyframes moveInLeftStrong {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+  50% {
+    transform: translateX(2rem);
+  }
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -19,11 +31,23 @@
     opacity: 0;
     transform: translateX(10rem);
   }
-
   50% {
     transform: translateX(-3rem);
   }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
+@keyframes moveInRightStrong {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem);
+  }
+  50% {
+    transform: translateX(-2rem);
+  }
   100% {
     opacity: 1;
     transform: translateX(0);

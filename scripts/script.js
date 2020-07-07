@@ -69,12 +69,22 @@ const PRODUCT_CATEGORY_LIST_HTML = {
 };
 
 function updateProductGrid(e) {
-  productCategories.forEach((category) => {
-    category.classList.remove('product__category--active');
-  });
-  e.currentTarget.classList.add('product__category--active');
-  productGallery.innerHTML =
-    PRODUCT_CATEGORY_LIST_HTML[e.currentTarget.dataset.category];
+  if (!e.currentTarget.classList.contains('product__category--active')) {
+    productCategories.forEach((category) => {
+      category.classList.remove('product__category--active');
+    });
+    e.currentTarget.classList.add('product__category--active');
+
+    productGallery
+      .querySelectorAll('figure')
+      .forEach((fig) => fig.classList.add('hide'));
+
+    let innerHtml =
+      PRODUCT_CATEGORY_LIST_HTML[e.currentTarget.dataset.category];
+    setTimeout(() => {
+      productGallery.innerHTML = innerHtml;
+    }, 1000);
+  }
 }
 
 productCategories.forEach((category) => {
@@ -105,8 +115,8 @@ $(document).ready(function () {
     centerMode: true,
     focusOnSelect: true,
 
-    // autoplay: true,
-    // autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 1000,
     responsive: [
       {
         breakpoint: 600,

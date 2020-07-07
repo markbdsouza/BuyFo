@@ -31,7 +31,7 @@ ORDER of changin: base + Typography -> general layout + grid -> page laoyout -> 
         flex-direction: column;
         justify-content: space-evenly; } }
     .carousel__item--2 {
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(94, 33, 33, 0.6)), url("../img/Carousel/product.jpg");
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(94, 33, 33, 0.6)), url("./../img/Carousel/product.jpg");
       background-position: top;
       background-repeat: none;
       background-size: cover; }
@@ -175,12 +175,15 @@ ORDER of changin: base + Typography -> general layout + grid -> page laoyout -> 
   display: flex;
   align-items: center;
   flex-direction: column;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 1s; }
   .product__category--active {
     font-size: 3rem;
     color: #8d3434; }
     .product__category--active svg {
       fill: #8d3434; }
+  .product__category:hover {
+    transform: scale(1.2); }
 
 .product__icon {
   height: 4rem;
@@ -188,7 +191,25 @@ ORDER of changin: base + Typography -> general layout + grid -> page laoyout -> 
 
 .product__item {
   position: relative;
-  height: 25vw; }
+  height: 25vw;
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition: 1s all; }
+  .product__item--1, .product__item--5, .product__item--9, .product__item--13 {
+    animation: moveInLeft 1s;
+    animation-timing-function: ease-out; }
+  .product__item--2, .product__item--6, .product__item--10, .product__item--14 {
+    animation: moveInLeftStrong 1s;
+    animation-timing-function: ease-out; }
+  .product__item--3, .product__item--7, .product__item--11, .product__item--15 {
+    animation: moveInRightStrong 1s;
+    animation-timing-function: ease-out; }
+  .product__item--4, .product__item--8, .product__item--12, .product__item--16 {
+    animation: moveInRight 1s;
+    animation-timing-function: ease-out; }
+  .product__item.hide {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0; }
 
 .product__grid {
   display: grid;
@@ -344,12 +365,32 @@ body {
     opacity: 1;
     transform: translateX(0); } }
 
+@keyframes moveInLeftStrong {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem); }
+  50% {
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
     transform: translateX(10rem); }
   50% {
     transform: translateX(-3rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRightStrong {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem); }
+  50% {
+    transform: translateX(-2rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }

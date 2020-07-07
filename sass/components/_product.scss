@@ -33,6 +33,7 @@
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+    transition: all 1s;
 
     &--active {
       font-size: 3rem;
@@ -40,6 +41,10 @@
       & svg {
         fill: $color-primary;
       }
+    }
+
+    &:hover {
+      transform: scale(1.2);
     }
   }
 
@@ -51,6 +56,45 @@
   &__item {
     position: relative;
     height: 25vw;
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    transition: 1s all;
+
+    &--1,
+    &--5,
+    &--9,
+    &--13 {
+      animation: moveInLeft 1s;
+      animation-timing-function: ease-out;
+    }
+
+    &--2,
+    &--6,
+    &--10,
+    &--14 {
+      animation: moveInLeftStrong 1s;
+      animation-timing-function: ease-out;
+    }
+    &--3,
+    &--7,
+    &--11,
+    &--15 {
+      animation: moveInRightStrong 1s;
+      animation-timing-function: ease-out;
+    }
+
+    &--4,
+    &--8,
+    &--12,
+    &--16 {
+      animation: moveInRight 1s;
+      animation-timing-function: ease-out;
+    }
+
+    &.hide {
+      transform: translateY(100%) scale(0.5);
+      opacity: 0;
+    }
   }
 
   &__grid {
